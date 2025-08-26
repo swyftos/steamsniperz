@@ -1,7 +1,0 @@
-source .venv/bin/activate
-python - <<'PY'
-from dotenv import load_dotenv; load_dotenv()
-import os, re
-t=os.getenv("TELEGRAM_BOT_TOKEN"); print("TOKEN lu =", repr(t))
-print("Format OK ?", bool(re.match(r'^\d{7,12}:[A-Za-z0-9_-]{35,}$', t or "")))
-PY
