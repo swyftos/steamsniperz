@@ -1,1 +1,5 @@
-pip install --upgrade "python-telegram-bot==20.7" "pydantic==2.6.4" "pydantic-core==2.16.3"
+TELEGRAM_BOT_TOKEN=8384242754:AAE5k12H03ZGcosCZu9Q0BbIcBKNj1HMmW5o
+REDDIT_CLIENT_ID=Wwbd6pYJDSa5fwB4PZjtwA
+REDDIT_CLIENT_SECRET=ir38-Mj6aIer-8ATPTkCn1L6KD_gXQ
+MONGO_URI=mongodb://localhost:27017/tele2reddit
+TEMP_DIR=tmp
