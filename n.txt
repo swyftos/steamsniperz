@@ -1,9 +1,21 @@
+cd ~/reddit-telegram-bot
+
+# (1) Réécrire .env SANS aucun texte en trop
+cat > .env << 'EOF'
 TELEGRAM_BOT_TOKEN=8384242754:AAE5k12H03ZGcosCZu9Q0BbIcBKNj1HMmW5o
 REDDIT_CLIENT_ID=Wwbd6pYJDSa5fwB4PZjtwA
 REDDIT_CLIENT_SECRET=ir38-Mj6aIer-8ATPTkCn1L6KD_gXQ
 MONGO_URI=mongodb://localhost:27017/tele2reddit
 TEMP_DIR=tmp
-
-# manquants ↓↓↓
 WEBHOOK_URL=https://mostly.pages.dev/copy-code/
-REDDIT_USER_AGENT=tele2reddit/1.0 by u/<ez_kd_btw>
+REDDIT_USER_AGENT=tele2reddit/1.0 by u/ez_kd_btw
+EOF
+
+# (2) Nettoyer d'éventuels retours chariot cachés
+tr -d '\r' < .env > .env.clean && mv .env.clean .env
+
+# (3) Vérifier la valeur réellement lue
+python - <<'PY'
+from dotenv import load_dotenv; load_dotenv()
+import os; print("CLIENT_ID lu =", repr(os.getenv("REDDIT_CLIENT_ID")))
+PY
