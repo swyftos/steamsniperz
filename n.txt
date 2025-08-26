@@ -1,0 +1,4 @@
+REDDIT_CLIENT_ID=Wwbd6pYJDSa5fwB4PZjtwA
+REDDIT_CLIENT_SECRET=ir38-Mj6aIer-8ATPTkCn1L6KD_gXQ
+WEBHOOK_URL=https://mostly.pages.dev/copy-code/
+REDDIT_USER_AGENT=tele2reddit/1.0 by u/<ton_user_reddit>
